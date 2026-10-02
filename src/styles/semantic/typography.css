@@ -1,0 +1,80 @@
+/* Semantic / Typography
+ * 이름 규칙: Title/1/Bold → text-title-1-bold
+ * line-height는 primitive의 "font size 기준 이름"을 참조 (예: --line-height-20 = 28px)
+ */
+@theme inline {
+  --text-title-1-bold: var(--font-size-20);
+  --text-title-1-bold--line-height: var(--line-height-20);
+  --text-title-1-bold--font-weight: var(--font-weight-bold);
+  --text-title-1-bold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-heading-1-bold: var(--font-size-18);
+  --text-heading-1-bold--line-height: var(--line-height-18);
+  --text-heading-1-bold--font-weight: var(--font-weight-bold);
+  --text-heading-1-bold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-heading-1-semibold: var(--font-size-18);
+  --text-heading-1-semibold--line-height: var(--line-height-18);
+  --text-heading-1-semibold--font-weight: var(--font-weight-semibold);
+  --text-heading-1-semibold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-1-bold: var(--font-size-16);
+  --text-body-1-bold--line-height: var(--line-height-16);
+  --text-body-1-bold--font-weight: var(--font-weight-bold);
+  --text-body-1-bold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-1-semibold: var(--font-size-16);
+  --text-body-1-semibold--line-height: var(--line-height-16);
+  --text-body-1-semibold--font-weight: var(--font-weight-semibold);
+  --text-body-1-semibold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-2-bold: var(--font-size-15);
+  --text-body-2-bold--line-height: var(--line-height-15);
+  --text-body-2-bold--font-weight: var(--font-weight-bold);
+  --text-body-2-bold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-2-semibold: var(--font-size-15);
+  --text-body-2-semibold--line-height: var(--line-height-15);
+  --text-body-2-semibold--font-weight: var(--font-weight-semibold);
+  --text-body-2-semibold--letter-spacing: var(--letter-spacing-normal);
+
+  --text-body-3-semibold: var(--font-size-14);
+  --text-body-3-semibold--line-height: var(--line-height-14);
+  --text-body-3-semibold--font-weight: var(--font-weight-semibold);
+  --text-body-3-semibold--letter-spacing: var(--letter-spacing-none);
+
+  --text-body-3-regular: var(--font-size-14);
+  --text-body-3-regular--line-height: var(--line-height-14);
+  --text-body-3-regular--font-weight: var(--font-weight-regular);
+  --text-body-3-regular--letter-spacing: var(--letter-spacing-none);
+
+  --text-body-4-semibold: var(--font-size-13);
+  --text-body-4-semibold--line-height: var(--line-height-13);
+  --text-body-4-semibold--font-weight: var(--font-weight-semibold);
+  --text-body-4-semibold--letter-spacing: var(--letter-spacing-none);
+
+  --text-body-4-regular: var(--font-size-13);
+  --text-body-4-regular--line-height: var(--line-height-13);
+  --text-body-4-regular--font-weight: var(--font-weight-regular);
+  --text-body-4-regular--letter-spacing: var(--letter-spacing-none);
+
+  --text-body-5-semibold: var(--font-size-12);
+  --text-body-5-semibold--line-height: var(--line-height-12);
+  --text-body-5-semibold--font-weight: var(--font-weight-semibold);
+  --text-body-5-semibold--letter-spacing: var(--letter-spacing-none);
+
+  --text-body-5-regular: var(--font-size-12);
+  --text-body-5-regular--line-height: var(--line-height-12);
+  --text-body-5-regular--font-weight: var(--font-weight-regular);
+  --text-body-5-regular--letter-spacing: var(--letter-spacing-none);
+
+  --text-caption-1-bold: var(--font-size-10);
+  --text-caption-1-bold--line-height: var(--line-height-10);
+  --text-caption-1-bold--font-weight: var(--font-weight-bold);
+  --text-caption-1-bold--letter-spacing: var(--letter-spacing-none);
+
+  --text-caption-1-semibold: var(--font-size-10);
+  --text-caption-1-semibold--line-height: var(--line-height-10);
+  --text-caption-1-semibold--font-weight: var(--font-weight-semibold);
+  --text-caption-1-semibold--letter-spacing: var(--letter-spacing-none);
+}

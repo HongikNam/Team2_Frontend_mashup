@@ -1,0 +1,24 @@
+:root {
+    --border-default: var(--color-gray-200);
+    --border-strong: var(--color-gray-400);
+    --border-bold: var(--color-gray-900);
+    --border-disabled: var(--color-gray-500);
+    --border-focused: var(--color-blue-500);
+}
+
+.dark {
+    --border-default: var(--color-gray-800);
+    --border-strong: var(--color-gray-600);
+    --border-bold: var(--color-gray-200);
+    --border-disabled: var(--color-gray-400);
+    --border-focused: var(--color-blue-300);
+}
+
+@theme inline {
+    /* Border → border-border-default */
+    --color-border-default: var(--border-default);
+    --color-border-strong: var(--border-strong);
+    --color-border-bold: var(--border-bold);
+    --color-border-disabled: var(--border-disabled);
+    --color-border-focused: var(--border-focused);
+}

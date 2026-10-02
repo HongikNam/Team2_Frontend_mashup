@@ -1,0 +1,29 @@
+:root {
+    --icon-default: var(--color-gray-400);
+    --icon-subtle: var(--color-gray-200);
+    --icon-bright: var(--color-gray-50);
+    --icon-strong: var(--color-gray-800);
+    --icon-brand: var(--color-blue-500);
+    --icon-success: var(--color-green-500);
+    --icon-alert: var(--color-orange-500);
+}
+.dark {
+    --icon-default: var(--color-gray-600);
+    --icon-subtle: var(--color-gray-700);
+    --icon-bright: var(--color-gray-800);
+    --icon-strong: var(--color-gray-300);
+    --icon-brand: var(--color-blue-500);
+    --icon-success: var(--color-green-500);
+    --icon-alert: var(--color-orange-500);
+}
+
+@theme inline {
+    /* Icon → text-icon-default / fill-icon-default */
+  --color-icon-default: var(--icon-default);
+  --color-icon-subtle: var(--icon-subtle);
+  --color-icon-bright: var(--icon-bright);
+  --color-icon-strong: var(--icon-strong);
+  --color-icon-brand: var(--icon-brand);
+  --color-icon-success: var(--icon-success);
+  --color-icon-alert: var(--icon-alert);
+}

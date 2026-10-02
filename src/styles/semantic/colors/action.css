@@ -1,0 +1,18 @@
+:root {
+    --action-default: var(--color-blue-500);
+    --action-pressed: var(--color-blue-700);
+    --action-disabled: var(--color-gray-400);
+}
+
+.dark {
+    --action-default: var(--color-blue-700);
+    --action-pressed: var(--color-blue-800);
+    --action-disabled: var(--color-gray-500);
+}
+
+@theme inline {
+    /* Action → bg-action-default */
+  --color-action-default: var(--action-default);
+  --color-action-pressed: var(--action-pressed);
+  --color-action-disabled: var(--action-disabled);
+}
