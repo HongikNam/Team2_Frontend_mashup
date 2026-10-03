@@ -1,0 +1,32 @@
+:root {
+  --text-default: var(--color-gray-900);
+  --text-secondary: var(--color-gray-800);
+  --text-tertiary: var(--color-gray-600);
+  --text-disabled: var(--color-gray-400);
+  --text-inverse: var(--color-gray-50);
+  --text-informative: var(--color-blue-500);
+  --text-alert: var(--color-orange-500);
+  --text-success: var(--color-green-500);
+}
+
+.dark {
+  --text-default: var(--color-gray-50);
+  --text-secondary: var(--color-gray-200);
+  --text-tertiary: var(--color-gray-400);
+  --text-disabled: var(--color-gray-700);
+  --text-inverse: var(--color-gray-800);
+  --text-informative: var(--color-blue-300);
+  --text-alert: var(--color-orange-300);
+  --text-success: var(--color-green-300);
+}
+
+@theme inline {
+  --color-text-default: var(--text-default);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-disabled: var(--text-disabled);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-informative: var(--text-informative);
+  --color-text-alert: var(--text-alert);
+  --color-text-success: var(--text-success);
+}

@@ -1,0 +1,20 @@
+@theme inline {
+    --radius-*: initial;
+    --radius-small: var(--unit-12);
+    --radius-medium: var(--unit-16);
+    --radius-large: var(--unit-36);
+    --radius-full: 500px;
+
+    --spacing-margin-small: var(--unit-4);
+    --spacing-margin-medium: var(--unit-12);
+    --spacing-margin-large: var(--unit-28);
+
+    --spacing-padding-small: var(--unit-4);
+    --spacing-padding-medium: var(--unit-8);
+    --spacing-padding-large: var(--unit-12);
+    --spacing-padding-wide: var(--unit-16);
+
+    --spacing-gap-small: var(--unit-4);
+    --spacing-gap-medium: var(--unit-8);
+    --spacing-gap-large: var(--unit-16);
+}
