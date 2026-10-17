@@ -1,5 +1,6 @@
-import Badge from "./Badge";
-import { isCurrencyCode } from "../constants/currencies";
+import Badge from "../Badge";
+import DottedArrowIcon from "../icons/DottedArrowIcon";
+import { isCurrencyCode } from "../../constants/currencies";
 
 interface TransferAmountSummaryProps {
   fromCurrency: string;
@@ -25,26 +26,24 @@ function TransferAmountSummary({
   return (
     <div
       aria-label="송금 금액 요약"
-      className="flex w-full flex-wrap items-center justify-center gap-gap-12 rounded-medium bg-surface-default p-padding-wide"
+      className="flex w-[362px] items-center justify-center gap-gap-12 rounded-medium bg-surface-default p-padding-wide"
     >
       <div className="flex items-center gap-gap-8">
         {isCurrencyCode(fromCurrency) && (
-          <Badge currency={fromCurrency} aria-hidden="true" />
+          <Badge currency={fromCurrency} size="sm" aria-hidden="true" />
         )}
         <span className="sr-only">보내는 금액 {fromCurrency}</span>
-        <span className="text-title-1-bold text-text-secondary">
+        <span className="text-body-2-semibold text-text-secondary">
           {formatAmount(sendAmount)}
         </span>
       </div>
-      <span aria-hidden="true" className="text-text-disabled">
-        →
-      </span>
+      <DottedArrowIcon aria-hidden="true" />
       <div className="flex items-center gap-gap-8">
         {isCurrencyCode(toCurrency) && (
-          <Badge currency={toCurrency} aria-hidden="true" />
+          <Badge currency={toCurrency} size="sm" aria-hidden="true" />
         )}
         <span className="sr-only">받는 금액 {toCurrency}</span>
-        <span className="text-title-1-bold text-text-secondary">
+        <span className="text-body-2-semibold text-text-secondary">
           {formatAmount(receiveAmount)}
         </span>
       </div>

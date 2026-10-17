@@ -1,4 +1,4 @@
-import type { TransferDraft, TransferQuote } from "../components/CardTransfer";
+import type { TransferDraft, TransferQuote } from "../components/w1/CardTransfer";
 
 // UI 확인용 임의 환율입니다. 실시간 시세가 아니며 1 KRW 기준입니다.
 // 나중에 api 연동시 이 파일을 지우고, import 하는 곳을 API 응답으로 교체하면 됩니다.

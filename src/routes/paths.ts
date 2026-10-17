@@ -3,4 +3,5 @@ export const PATHS = {
   HISTORY: "/history",
   CUSTOMER: "/customer",
   MY: "/my",
+  TRANSFER: "/transfer",
 } as const;

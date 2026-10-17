@@ -1,10 +1,13 @@
 import Toggle, { type ToggleValue } from "./Toggle";
-import ExchangeRate from "./ExchangeRate";
-import Button from "./Button";
-import Wallet from "./icons/Wallet";
-import TransferAmountFields from "./TransferAmountFields";
-
-const MIN_SEND_AMOUNT_KRW = 5_000;
+import ExchangeRate from "../ExchangeRate";
+import Button from "../Button";
+import Wallet from "../icons/Wallet";
+import TransferAmountFields from "../TransferAmountFields";
+import {
+  MIN_SEND_AMOUNT_MESSAGE,
+  isBelowMinimum,
+  isValidAmount,
+} from "../../utils/transferAmount";
 
 export interface TransferDraft {
   region: ToggleValue;
@@ -51,11 +54,8 @@ function CardTransfer({
   onSubmit,
 }: CardTransferProps) {
   const overseas = value.region === "overseas";
-  const validAmount =
-    /^\d+(?:\.\d+)?$/.test(value.sendAmount) && /[1-9]/.test(value.sendAmount);
-  const belowMinimum =
-    value.fromCurrency === "KRW" &&
-    (value.sendAmount === "" || Number(value.sendAmount) < MIN_SEND_AMOUNT_KRW);
+  const validAmount = isValidAmount(value.sendAmount);
+  const belowMinimum = isBelowMinimum(value.fromCurrency, value.sendAmount);
   // 이전 입력에 대한 응답은 현재 금액에 표시하거나 제출하지 않습니다.
   const currentQuote =
     quote?.sendAmount === value.sendAmount &&
@@ -113,9 +113,7 @@ function CardTransfer({
                 }
                 onFromCurrencyClick={onFromCurrencyClick}
                 onToCurrencyClick={onToCurrencyClick}
-                helperText={
-                  belowMinimum ? "최소 송금액은 5,000 KRW입니다." : undefined
-                }
+                helperText={belowMinimum ? MIN_SEND_AMOUNT_MESSAGE : undefined}
               />
             </>
           ) : (

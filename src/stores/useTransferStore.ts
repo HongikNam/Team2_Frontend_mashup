@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
+import type { ReceiveOption } from "../types/receiveOption";
 
 // 홈에서 송금하기를 눌렀을 때 다음 화면들로 넘길 송금 정보입니다.
 export interface TransferInfo {
@@ -8,6 +9,7 @@ export interface TransferInfo {
   rate: number;
   sendAmount: string;
   receiveAmount: string;
+  receiveMethod?: ReceiveOption; // 송금 페이지에서 "다음"을 누를 때 선택한 받는 방법
 }
 
 interface TransferState {

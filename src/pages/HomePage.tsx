@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import NavBar from "../components/NavBar";
-import MyWallet from "../components/MyWallet";
+import MyWallet from "../components/w1/MyWallet";
 import CardTransfer, {
   type TransferDraft,
   type TransferQuote,
-} from "../components/CardTransfer";
+} from "../components/w1/CardTransfer";
 import CurrencySelectSheet from "../components/CurrencySelectSheet";
 import { getMockQuote, getMockRate } from "../mocks/exchangeRates";
 import { useTransferStore } from "../stores/useTransferStore";
@@ -15,6 +15,7 @@ import { PATHS } from "../routes/paths";
 const MOCK_WALLET_BALANCE = 10000;
 
 function HomePage() {
+  // TODO: API 연동 시 과거 이력 기준으로 카드들 변경 시키는 기능 추가하기
   const [draft, setDraft] = useState<TransferDraft>({
     region: "overseas",
     fromCurrency: "KRW",
@@ -40,8 +41,7 @@ function HomePage() {
       sendAmount: submitted.sendAmount,
       receiveAmount: submittedQuote.receiveAmount,
     });
-    // TODO: 다음 화면이 생기면 경로 교체
-    navigate(PATHS.HOME);
+    navigate(PATHS.TRANSFER);
   };
 
   return (
