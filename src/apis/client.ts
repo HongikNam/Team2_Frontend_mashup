@@ -2,11 +2,9 @@ import axios, { type AxiosRequestConfig } from "axios";
 import { ApiError, type ApiResponse } from "../types/api";
 
 // 개발 중에는 Vite 프록시(/api → .env 의 VITE_API_BASE_URL)를 거쳐 CORS 를 피합니다.
-// 배포 환경에서는 서버 주소로 바로 요청합니다. (백엔드 CORS 허용 또는 배포 프록시 필요)
+// Vercel 배포에서는 /backend 프록시를 거쳐 HTTPS 페이지의 HTTP 직접 요청을 피합니다.
 export const client = axios.create({
-  baseURL: import.meta.env.DEV
-    ? "/api"
-    : `${import.meta.env.VITE_API_BASE_URL}/api`,
+  baseURL: import.meta.env.DEV ? "/api" : "/backend/api",
   timeout: 5_000,
 });
 

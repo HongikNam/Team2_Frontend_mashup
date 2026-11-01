@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 function NavBar({ className = "", ...props }: ComponentPropsWithoutRef<"nav">) {
   return (
     <nav
-      className={`flex h-[108px] w-[402px] items-center justify-center gap-(--unit-56) bg-surface-default px-margin-large pt-padding-large pb-[54px] ${className}`}
+      className={`flex w-[402px] items-center justify-center gap-(--unit-56) bg-surface-default px-margin-large pt-padding-large pb-[8px] ${className}`}
       {...props}
     >
       {NAV_ITEMS.map(({ label, Icon, path }) => (
