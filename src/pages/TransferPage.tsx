@@ -228,25 +228,21 @@ function TransferPage() {
       </main>
 
       {/* 하단 버튼: 화면 아래에 고정 */}
-      <footer className="flex w-[402px] shrink-0 flex-col bg-surface-default">
-        <div className="flex h-[108px] shrink-0 flex-col items-start px-[20px] py-padding-wide">
-          {canProceed ? (
-            <Button size="lg" className="flex-col" onClick={handleNext}>
-              <span>다음</span>
-              <span className="text-body-5-regular">
-                총 출금액{" "}
-                {(sendAmount + selectedOption.fixedFee).toLocaleString("ko-KR")}{" "}
-                {transfer.fromCurrency}
-              </span>
-            </Button>
-          ) : (
-            <Button size="lg" disabled>
-              확인
-            </Button>
-          )}
-        </div>
-        {/* 높이용 빈칸 */}
-        <div aria-hidden="true" className="h-(--unit-24)" />
+      <footer className="flex w-[402px] shrink-0 flex-col bg-surface-default px-[20px] pt-padding-wide pb-[calc(var(--unit-24)+env(safe-area-inset-bottom))]">
+        {canProceed ? (
+          <Button size="lg" className="flex-col" onClick={handleNext}>
+            <span>다음</span>
+            <span className="text-body-5-regular">
+              총 출금액{" "}
+              {(sendAmount + selectedOption.fixedFee).toLocaleString("ko-KR")}{" "}
+              {transfer.fromCurrency}
+            </span>
+          </Button>
+        ) : (
+          <Button size="lg" disabled>
+            확인
+          </Button>
+        )}
       </footer>
 
       {detailOption && (
